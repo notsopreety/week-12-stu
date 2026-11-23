@@ -3,34 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio - Week 12</title>
+  <title>My Portfolio - Week 13</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <h1>Samir's Portfolio</h1>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#greeting-section">Greeting</a>
+      <a href="#hobbies-section">Hobbies</a>
+      <a href="#gallery-section">Gallery</a>
+    </nav>
     <button id="dark-mode-toggle">Toggle Dark Mode</button>
   </header>
 
   <main>
-    <!-- Greeting Section -->
-    <section id="greeting-section">
+    <section id="greeting-section" class="card">
       <div id="greeting-message"></div>
     </section>
 
-    <!-- Step 1: Hobby/Skill List Rendering -->
-    <section id="hobbies-section">
-      <h2>My Hobbies & Skills</h2>
+    <section id="hobbies-section" class="card">
+      <h2>My Hobbies &amp; Skills</h2>
       <div id="hobby-list"></div>
     </section>
 
-    <!-- Step 2: Hobby Gallery Extension -->
-    <section id="gallery-section">
+    <section id="gallery-section" class="card">
       <h2>Hobby Gallery</h2>
       <div class="gallery-container">
-        <img id="gallery-image" src="https://picsum.photos/id/10/600/400" alt="Hobby Gallery Image">
-        <br>
+        <img id="gallery-img" src="https://picsum.photos/id/10/600/400" alt="Hobby Gallery Image">
+        <p id="gallery-caption">Photography</p>
         <button id="next-photo-btn">Next Photo</button>
       </div>
     </section>

@@ -1,75 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  background-color: #f9f9f9;
-  color: #333;
-  transition: background-color 0.3s, color 0.3s;
+  background-color: #f4f4f4;
+  color: #222222;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 10px;
+  gap: 12px;
   margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #cccccc;
 }
 
-button {
-  padding: 8px 16px;
-  cursor: pointer;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 4px;
+h1 {
+  font-size: 3rem;
+  margin: 0;
 }
 
-button:hover {
-  background-color: #0056b3;
+nav {
+  display: flex;
+  gap: 12px;
 }
 
-section {
-  background: white;
+nav a {
+  text-decoration: none;
+  color: #1a56db;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #ffffff;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-#hobby-list ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-#hobby-list li {
-  margin: 8px 0;
-  font-size: 1.1em;
+button {
+  padding: 10px 16px;
+  min-height: 44px;
+  cursor: pointer;
+  background-color: #1a56db;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
 }
 
 .gallery-container {
   text-align: center;
 }
 
-#gallery-image {
+#gallery-img {
   max-width: 100%;
-  height: auto;
   border-radius: 6px;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
 }
 
-/* Dark Mode Styles */
 body.dark-mode {
   background-color: #121212;
-  color: #e0e0e0;
+  color: #eeeeee;
 }
 
-body.dark-mode section {
+body.dark-mode .card {
   background-color: #1e1e1e;
-  box-shadow: 0 2px 4px rgba(255,255,255,0.05);
 }
 
-body.dark-mode header {
-  border-bottom-color: #333;
+body.dark-mode nav a {
+  color: #76a9fa;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .card,
+  #gallery-img {
+    max-width: 100%;
+  }
+
+  button {
+    min-height: 44px;
+    width: 100%;
+  }
 }
