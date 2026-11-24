@@ -1,107 +1,75 @@
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  background-color: #f4f4f4;
-  color: #222222;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
   margin-bottom: 20px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid #cccccc;
-}
-
-h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-nav {
-  display: flex;
-  gap: 12px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #1a56db;
-  font-weight: bold;
-}
-
-.card {
-  background-color: #ffffff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
 }
 
 button {
-  padding: 10px 16px;
-  min-height: 44px;
+  padding: 8px 16px;
   cursor: pointer;
-  background-color: #1a56db;
-  color: #ffffff;
+  background-color: #007BFF;
+  color: white;
   border: none;
   border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#hobby-list ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#hobby-list li {
+  margin: 8px 0;
+  font-size: 1.1em;
 }
 
 .gallery-container {
   text-align: center;
 }
 
-#gallery-img {
+#gallery-image {
   max-width: 100%;
+  height: auto;
   border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
 }
 
+/* Dark Mode Styles */
 body.dark-mode {
   background-color: #121212;
-  color: #eeeeee;
+  color: #e0e0e0;
 }
 
-body.dark-mode .card {
+body.dark-mode section {
   background-color: #1e1e1e;
+  box-shadow: 0 2px 4px rgba(255,255,255,0.05);
 }
 
-body.dark-mode nav a {
-  color: #76a9fa;
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  .card,
-  #gallery-img {
-    max-width: 100%;
-  }
-
-  button {
-    min-height: 44px;
-    width: 100%;
-  }
+body.dark-mode header {
+  border-bottom-color: #333;
 }
